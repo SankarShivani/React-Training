@@ -1,0 +1,43 @@
+<html>
+<body>
+<h1>LOGIN</h1>
+<h1 id="res"></h1></body>
+<input type="txt" id="P1"><br><br>
+<input type="txt" id="U1">
+<button id="b">VALIDATION</button></body>
+<script>
+document.getElementById('b').addEventListener('click',function(){
+var PASS=(document.getElementById("P1").value);
+var User=(document.getElementById("U1").value);
+var X="Shiva";
+var U="Blissful";
+console.log(PASS);
+console.log(User);
+if(PASS==X & User==U)
+{
+console.log("LOGIN SUCCESSFULL!!!");
+var Y="SUCCESS!!!";
+document.getElementById('res').innerText=`${Y}`;
+}
+else if(PASS!=X & User==U)
+{
+console.log("Password incorrect");
+var Z="Password is incorrect!!";
+document.getElementById('res').innerText=`${Z}`;
+}
+else if(PASS==X & User!=U)
+{
+console.log("Username is incorrect");
+var C="Username is incorrect!!";
+document.getElementById('res').innerText=`${C}`;
+}
+else 
+{
+console.log("Both are invalid!!");
+var D="Both are invalid!!";
+document.getElementById('res').innerText=`${D}`;
+}
+
+});
+</script>
+</html>
